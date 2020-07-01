@@ -1,0 +1,9 @@
+{
+  "engine": "cocos-creator-js",
+  "packages": "packages",
+  "name": "HappyLifeClient",
+  "uuid": "baa8f272-d81a-42ea-aaa2-e1903a19ead8",
+  "version": "2.4.0",
+  "id": "31a4319e-fbc8-43f7-9f4c-2c73d1e16ab5",
+  "isNew": false
+}
