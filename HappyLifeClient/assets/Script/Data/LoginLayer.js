@@ -17,7 +17,9 @@ cc.Class({
                 console.log("登录");
                 console.log("edit box", this.editBox.getComponent(cc.EditBox).string);
                 global.controller.setPlayerName(this.editBox.getComponent(cc.EditBox).string);
-                global.controller.loginServer();
+                global.controller.loginServer().then(()=>{
+                    this.node.destroy();
+                });
                 break;
             default:
                 break;

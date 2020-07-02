@@ -39,9 +39,27 @@ class DB {
         str2 = str2.substring(0, str2.length - 1);
         console.log("str", str);
         console.log("str2", str2);
-        sql = sql + str1 + ")" 
+        sql = sql + str + ") values (" + str2 + ");";
+        console.log("sql", sql);
+        return new Promise((resolve, reject) => {
+            connection.query(sql, (err, results, fields) => {
+                console.log("result", results);
+                if (err) {
+                    reject(err);
+                } else {
+                    resolve(results);
+                }
+            });
+        })
+    }
+    getBuildInfo(){
+
     }
 }
 module.exports = DB;
 //create table playerinfo(id int, money int, score int);
 //select from * playerinfo where id = 
+//ALTER TABLE menu_function ADD COLUMN sort VARCHAR(20) DEFAULT NULL COMMENT '排序字段'
+// alter table playerinfo add column name varchar(20) DEFAULT NULL COMMENT '无名氏'
+// create table houseinfo(ownerid varchar(20),ownername varchar(20),id int, state int,build_cost int);
+// 状态 food count 

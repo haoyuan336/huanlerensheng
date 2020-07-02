@@ -16,18 +16,30 @@ class Controller {
     getNetworkController() {
         return this._networkController;
     }
-    loginServer(){
-        return new Promise((resolve, reject)=>{
+    loginServer() {
+        return new Promise((resolve, reject) => {
             this._mainNodeController.emit("show-wait-layer");
             this._networkController.loginServer({
                 id: this._playerid,
                 name: this._playerName
-            }).then(()=>{
-                console.log("登录成功")
+            }).then((data) => {
+                console.log("登录成功", data);
+                if (data.status === 'ok') {
+                    this._mainNodeController.emit("enter-game-layer", data.data);
+                    resolve();
+                }
+
             })
         });
     }
-    setPlayerName(name){
+    showWaitLyer(value) {
+        if (value) {
+            this._mainNodeController.emit("show-wait-layer");
+        } else {
+            this._mainNodeController.emit("hide-wait-layer");
+        }
+    }
+    setPlayerName(name) {
         this._playerName = name;
     }
     setMainNodeController(node) {

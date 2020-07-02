@@ -1,9 +1,10 @@
+let serUrl = "http://127.0.0.1:3000";
 class NetworkController {
     constructor() {
 
     }
     loginServer(data) {
-        return fetch('http://127.0.0.1:3000/login',
+        return fetch(serUrl + '/login',
             {
                 method: "post",
                 headers: {
@@ -13,6 +14,13 @@ class NetworkController {
             }).then((response) => {
                 return response.json();
             })
+    }
+    getGameConfig() {
+        return fetch(serUrl + '/getGameConfig', {
+            method: "get"
+        }).then((response)=>{
+            return response.json();
+        })
     }
 }
 export default NetworkController;

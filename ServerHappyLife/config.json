@@ -1,0 +1,26 @@
+{
+    "foodConfig": {
+        "jianbing": {
+            "name": "煎饼",
+            "cost": 5,
+            "power": 10
+        },
+        "hotdog": {
+            "name": "热狗",
+            "cost": 5,
+            "power": 10
+        }
+    },
+    "buildconfig": {
+        "jianbingtan": {
+            "name": "煎饼摊",
+            "buildcost": 100,
+            "needworkercount": 1
+        },
+        "hotdogtan": {
+            "name": "热狗摊",
+            "buildcost": 100,
+            "needwoekercount": 1
+        }
+    }
+}

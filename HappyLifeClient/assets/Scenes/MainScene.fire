@@ -171,7 +171,7 @@
       "array": [
         0,
         0,
-        532.6056233274298,
+        532.7720625847196,
         0,
         0,
         0,
@@ -287,6 +287,9 @@
     },
     "loginLayerPrefab": {
       "__uuid__": "ff3fa8cf-ed15-491c-bf8d-7c4296e7681a"
+    },
+    "gameLayerPrefab": {
+      "__uuid__": "f227ef91-cdf5-47f2-8688-f0626c94bba9"
     },
     "_id": "59hFIfpxJE25DgKo522Hxf"
   }
