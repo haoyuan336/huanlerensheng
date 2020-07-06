@@ -1,4 +1,4 @@
-let serUrl = "http://127.0.0.1:3000";
+let serUrl = "http://120.53.243.146:3000";
 class NetworkController {
     constructor() {
 
