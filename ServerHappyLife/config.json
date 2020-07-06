@@ -15,12 +15,14 @@
         "jianbingtan": {
             "name": "煎饼摊",
             "buildcost": 100,
-            "needworkercount": 1
+            "needworkercount": 1,
+            "des": "每分钟做一套煎饼的煎饼摊，煎饼真好吃，又能填饱肚子！"
         },
         "hotdogtan": {
             "name": "热狗摊",
             "buildcost": 100,
-            "needwoekercount": 1
+            "needwoekercount": 1,
+            "des": "每半分钟就可以做一套热狗，既好吃又时尚，香蕉人的最爱！"
         }
     }
 }
