@@ -1068,10 +1068,18 @@
       "__id__": 1
     },
     "_enabled": true,
-    "namelabel": null,
-    "desLabel": null,
-    "goldCostLabel": null,
-    "workerCostLabel": null,
+    "nameLabel": {
+      "__id__": 5
+    },
+    "desLabel": {
+      "__id__": 8
+    },
+    "goldCostLabel": {
+      "__id__": 11
+    },
+    "workerCostLabel": {
+      "__id__": 14
+    },
     "_id": ""
   },
   {

@@ -16,6 +16,7 @@ cc.Class({
                 cellNode.x = 0;
                 cellNode.y = - index * 210 - cellNode.height * 0.5;
                 index ++; 
+                cellNode.emit("init", data[i]);
             }
         });
     },
