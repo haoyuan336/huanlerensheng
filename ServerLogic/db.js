@@ -21,7 +21,7 @@ class DB {
                 if (error) {
                     reject(error);
                 } else {
-                    resolve(null, results);
+                    resolve(results);
                 }
             });
         });
