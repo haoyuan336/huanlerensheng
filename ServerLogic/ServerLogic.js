@@ -10,20 +10,20 @@ ws.createServer((socket) => {
         let callBackIndex = data.callBackIndex;
         if (type === 'login') {
             console.log('玩家登录');
-            db.login(data.id).then((err, result) => {
+            db.login(data.data.id).then((err, result) => {
                 if (!err) {
                     if (result.length === 0) {
                         db.createUserInfo({
-                            id: id,
-                            name: data.name,
+                            id: data.data.id,
+                            name: data.data.name,
                             money: 500,
                             score: 0
                         }).then(() => {
                             socket.send(JSON.stringify({
                                 status: 'ok',
                                 result: {
-                                    id: data.id,
-                                    name: data.name,
+                                    id: data.data.id,
+                                    name: data.data.name,
                                     money: 500,
                                     score: 0
                                 },
