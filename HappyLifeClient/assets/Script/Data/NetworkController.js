@@ -25,7 +25,7 @@ class NetworkController {
     loginServer(data) {
         console.log("登录服务器", data);
         return new Promise((resolve)=>{
-
+            this.sendMessage('login', data);
         });
         // return fetch(serUrl + '/login',
         //     {
@@ -39,6 +39,12 @@ class NetworkController {
         //     }).then(() => {
         //         return this.connectLongServer();
         //     })
+    }
+    sendMessage(type, data){
+        this._ws.send({
+            type: type,
+            data: data
+        })
     }
    
     getGameConfig() {

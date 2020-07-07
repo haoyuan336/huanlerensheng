@@ -47,6 +47,7 @@ class Controller {
         
         this._networkController.connectLongServer().then(()=>{
             console.log("链接服务器成功");
+            this._mainNodeController.emit("show-login-layer");
         })
         // .then(()=>{
         //     this._mainNodeController.emit("show-login-layer");
