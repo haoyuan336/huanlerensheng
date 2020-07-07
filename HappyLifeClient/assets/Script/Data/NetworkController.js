@@ -15,6 +15,10 @@ class NetworkController {
             };
             this._ws.onmessage = (text) => {
                 console.log("收到消息", text);
+                let data = JSON.parse(text.data);
+                let callBackIndex = data.callBackIndex;
+
+
             };
             this._ws.onerror = (err) => {
                 console.error('connect server ', err);

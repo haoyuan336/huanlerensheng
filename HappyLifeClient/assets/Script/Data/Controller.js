@@ -11,6 +11,7 @@ class Controller {
             this._playerid = Date.now() + Math.floor(Math.random() * 10000);
             cc.sys.localStorage.setItem("playerid", this._playerid);
         }
+
         this._playerName = "无名氏";
     }
     getNetworkController() {
@@ -44,8 +45,8 @@ class Controller {
     }
     setMainNodeController(node) {
         this._mainNodeController = node;
-        
-        this._networkController.connectLongServer().then(()=>{
+
+        this._networkController.connectLongServer().then(() => {
             console.log("链接服务器成功");
             this._mainNodeController.emit("show-login-layer");
         })
