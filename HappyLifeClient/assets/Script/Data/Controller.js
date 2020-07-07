@@ -44,8 +44,14 @@ class Controller {
     }
     setMainNodeController(node) {
         this._mainNodeController = node;
-        this._mainNodeController.emit("show-login-layer");
+        
+        this._networkController.connectLongServer().then(()=>{
+            console.log("链接服务器成功");
+        })
+        // .then(()=>{
+        //     this._mainNodeController.emit("show-login-layer");
 
+        // });
         // this._networkController.loginServer({
         //     id: this._playerid,
         //     name: this._name
