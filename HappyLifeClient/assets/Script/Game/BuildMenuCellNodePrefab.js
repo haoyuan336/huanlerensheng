@@ -1,3 +1,5 @@
+const { default: global } = require("../global");
+
 cc.Class({
     extends: cc.Component,
 
@@ -24,6 +26,7 @@ cc.Class({
         switch (customData) {
             case 'build':
                 console.log("建造按钮");
+                // global.controller.show
                 break;
             default:
                 break;

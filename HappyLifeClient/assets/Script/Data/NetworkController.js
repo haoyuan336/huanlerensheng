@@ -17,6 +17,10 @@ class NetworkController {
                 console.log("收到消息", text);
                 let data = JSON.parse(text.data);
                 let callBackIndex = data.callBackIndex;
+                if (this._callBackMap[callBackIndex]){
+                    this._callBackMap[callBackIndex](data);
+                    delete this._callBackMap[callBackIndex];
+                }
 
 
             };
@@ -33,6 +37,9 @@ class NetworkController {
         return new Promise((resolve) => {
             this.sendMessage('login', data).then((result)=>{
                 console.log("登录结果", result);
+                if (result.status === 'ok'){
+                    resolve(result.result);
+                }
             });
         });
 

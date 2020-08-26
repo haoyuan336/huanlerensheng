@@ -24,12 +24,9 @@ class Controller {
                 id: this._playerid,
                 name: this._playerName
             }).then((data) => {
-                console.log("登录成功", data);
-                if (data.status === 'ok') {
-                    this._mainNodeController.emit("enter-game-layer", data.data);
-                    resolve();
-                }
-
+                this._mainNodeController.emit("enter-game-layer", data);
+                this._mainNodeController.emit("hide-wait-layer");
+                resolve();
             })
         });
     }
